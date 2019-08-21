@@ -1,0 +1,22 @@
+version: '1.0.{build}'
+image: Visual Studio 2017
+branches:
+  only:
+    - master
+init:
+  - cmd: git config --global core.autocrlf true
+install:
+before_build:
+  - cmd: dotnet --version
+  - cmd: dotnet restore NLog.Ifttt.sln --verbosity m
+build_script:
+  - cmd: dotnet publish NLog.Ifttt.sln -o ..\artifacts --verbosity m --framework net462 --runtime any
+after_build:
+artifacts:
+  - path: artifacts
+    name: bin
+    type: zip
+clone_depth: 1
+test_script:
+on_finish :
+deploy: off
