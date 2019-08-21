@@ -12,6 +12,7 @@ before_build:
 build_script:
   - cmd: dotnet publish NLog.Ifttt.sln -o artifacts --verbosity m --framework netstandard1.3 --runtime any
 after_build:
+  - cmd: dotnet pack src/NLog.Ifttt/NLog.Ifttt.csproj --output nupkgs
 artifacts:
   - path: artifacts
     name: bin
@@ -19,4 +20,8 @@ artifacts:
 clone_depth: 1
 test_script:
 on_finish :
-deploy: off
+deploy:
+  provider: NuGet
+    api_key:
+      secure: 3GGYob6t/cU66Mfzew+gEJVmcO8NOT73zrUUhPYKVXCOO93j3JFrS1xpto4MHYh7
+    artifact: /.*\.nupkg/
