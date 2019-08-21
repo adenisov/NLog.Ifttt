@@ -17,6 +17,9 @@ artifacts:
   - path: artifacts
     name: bin
     type: zip
+    
+  - path: 'nupkgs\*.nupkg'
+    name: nupkgs
 clone_depth: 1
 test_script:
 on_finish:
