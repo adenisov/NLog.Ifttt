@@ -23,5 +23,5 @@ on_finish:
 deploy:
   provider: NuGet
   api_key:
-    secure: 3GGYob6t/cU66Mfzew+gEJVmcO8NOT73zrUUhPYKVXCOO93j3JFrS1xpto4MHYh7
+    secure: 9wj2UdhWXMnspugsKG2d35NGV6AqGUJUPrdafkEljDvyFk1b0cNm3EK+MDhEBnxb
   artifact: nupkgs/*.nupkg
