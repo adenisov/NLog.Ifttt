@@ -10,7 +10,7 @@ before_build:
   - cmd: dotnet --version
   - cmd: dotnet restore NLog.Ifttt.sln --verbosity m
 build_script:
-  - cmd: dotnet publish NLog.Ifttt.sln -o ..\artifacts --verbosity m --framework net462 --runtime any
+  - cmd: dotnet publish NLog.Ifttt.sln -o ..\artifacts --verbosity m --framework netstandard1.3 --runtime any
 after_build:
 artifacts:
   - path: artifacts
