@@ -10,11 +10,11 @@ before_build:
   - cmd: dotnet --version
   - cmd: dotnet restore NLog.Ifttt.sln --verbosity m
 build_script:
-  - cmd: dotnet publish NLog.Ifttt.sln -o artifacts --verbosity m --framework netstandard1.3 --runtime any
+  - cmd: dotnet publish NLog.Ifttt.sln -o ../../artifacts --verbosity m --framework netstandard1.3 --runtime any
 after_build:
   - cmd: dotnet pack src/NLog.Ifttt/NLog.Ifttt.csproj --output ../../nupkgs
 artifacts:
-  - path: artifacts
+  - path: 'artifacts\**.*'
     name: bin
     type: zip
     

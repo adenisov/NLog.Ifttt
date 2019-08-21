@@ -3,6 +3,9 @@
     <PropertyGroup>
         <TargetFramework>netstandard1.3</TargetFramework>
         <RootNamespace>NLog.Targets</RootNamespace>
+        <AssemblyVersion></AssemblyVersion>
+        <!-- nuget -->
+        <PackageVersion></PackageVersion>
     </PropertyGroup>
 
     <ItemGroup>
