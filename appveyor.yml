@@ -14,10 +14,6 @@ build_script:
 after_build:
   - cmd: dotnet pack src/NLog.Ifttt/NLog.Ifttt.csproj --output ../../nupkgs
 artifacts:
-  - path: 'artifacts\**.*'
-    name: bin
-    type: zip
-    
   - path: 'nupkgs\*.nupkg'
     name: nupkgs
 clone_depth: 1

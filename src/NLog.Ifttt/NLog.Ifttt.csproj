@@ -3,9 +3,16 @@
     <PropertyGroup>
         <TargetFramework>netstandard1.3</TargetFramework>
         <RootNamespace>NLog.Targets</RootNamespace>
-        <AssemblyVersion></AssemblyVersion>
+        <AssemblyVersion>$(appveyor_build_version)</AssemblyVersion>
+    </PropertyGroup>
+    
+    <PropertyGroup>
         <!-- nuget -->
-        <PackageVersion></PackageVersion>
+        <IsPackable>true</IsPackable>
+        <RepositoryUrl>https://github.com/adenisov/NLog.Ifttt.git</RepositoryUrl>
+        <RepositoryType>git</RepositoryType>
+        <PackageVersion>$(appveyor_build_version)</PackageVersion>
+        <Description>Allows to use an IFTTT web hook as a NLog target.</Description>
     </PropertyGroup>
 
     <ItemGroup>
